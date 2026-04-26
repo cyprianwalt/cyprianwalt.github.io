@@ -18,7 +18,7 @@ function practice() {
                 " Ali, lütfen kalemi ver -> Ali, please give the pencil <br/> Erdem, kalemi al -> Erdem, take the pencil <br/> Ada, silgiyi al -> Ada, take the eraser<br/>" +
                 "Translate to Turkish: <br/> Esma, please give the eraser";
     } else if (set == 3) {
-        return "<b>Practice- set 3<b/>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Practice- set 3</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
                 " Mehmet, kağıda yaz -> Mehmet, write on the paper <br/> Meral, yazıyı sil -> Meral, erase the writing <br/> Buse, kağıdı at -> Buse, throw the paper<br/>" +
                 "Translate to Turkish: <br/> Ergin, erase the paper";
     }
@@ -27,13 +27,13 @@ function practice() {
 function test() {
     set = Math.floor(Math.random() * 3) + 4
     if (set == 4) {
-        return "<b>Test set 1<b/>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Test set 1</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
                 "Translate to English: <br/> Ahmet, topu Mehmet'e at";
     } else if (set == 5) {
-        return "<b>Test set 2<b/>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Test set 2</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
                 "Translate to English: <br/> Iclal, lütfen yaprağa yaz";
     } else if (set == 6) {
-        return "<b>Test set 3<b/>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Test set 3</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
                 "Translate to English: <br/> Osman, silgiyi havaya at";
     }
 }
