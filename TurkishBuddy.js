@@ -39,47 +39,48 @@ function test() {
 }
 
 function answer(set, answer) {
+    answer = document.getElementById('answer')
     if (set == 1) {
         if (answer == "yaprak havadadır" || answer == "Yaprak havadadır") {
             return "That's right!! Good job!!!"
         } else {
-            console.log("Not quite. The answer will be after the line, so if you want to try again, you've been warned not to peek!")
-            console.log("The correct answer is 'yaprak havadadır'")
+            return "Not quite. The answer will be after this line, so if you want to try again, you've been warned not to peek!<br/>" +
+            "The correct answer is 'yaprak havadadır'"
         }
     } else if (set == 2) {
         if (answer == "Esma, lütfen silgiyi ver") {
             return "That's right!! Good job!!!"
         } else {
-            console.log("Not quite. The answer will be after the line, so if you want to try again, you've been warned not to peek!")
-            console.log("The correct answer is 'Esma, lütfen silgiyi ver'")
+            return "Not quite. The answer will be after this line, so if you want to try again, you've been warned not to peek!<br/>" +
+            "The correct answer is 'Esma, lütfen silgiyi ver'"
         }
     } else if (set == 3) {
         if (answer == "Ergin, kağıdı sil") {
             return "That's right!! Good job!!!"
         } else {
-            console.log("Not quite. The answer will be after the line, so if you want to try again, you've been warned not to peek!")
-            console.log("The correct answer is 'Ergin, kağıdı sil'")
+            return "Not quite. The answer will be after this line, so if you want to try again, you've been warned not to peek! <br/>" +
+            "The correct answer is 'Ergin, kağıdı sil'"
         }
     } else if (set == 4) {
         if (answer == "Ahmet, throw the ball to Mehmet") {
             return "That's right!! You go, Turkish-non-Turk!!! (presumably)"
         } else {
-            console.log("Not quite. The answer will be after the line, so if you want to try again, you've been warned not to peek!")
-            console.log("The correct answer is 'Ahmet, throw the ball to Mehmet'")
+            return "Not quite. The answer will be after this line, so if you want to try again, you've been warned not to peek!<br/>" +
+            "The correct answer is 'Ahmet, throw the ball to Mehmet'. I hope Ahmet is not throwing the ball to hurt Mehmet. You wouldn't hurt a friend, would you, User?"
         }
     } else if (set == 5) {
         if (answer == "Iclal, please write on the leaf") {
             return "That's right!! Don't do this though, most leaves don't work well as writing material so it'd be a waste."
         } else {
-            console.log("Not quite. The answer will be after the line, so if you want to try again, you've been warned not to peek!")
-            console.log("The correct answer is 'Iclal, please write on the leaf'. User, please do not write on the leaf.")
+            return "Not quite. The answer will be after this line, so if you want to try again, you've been warned not to peek!<br/>" +
+            "The correct answer is 'Iclal, please write on the leaf'. User, please do not write on the leaf."
         }
     } else if (set == 6) {
         if (answer == "Osman, throw the eraser to the air") {
             return "That's right!! User, you wouldn't go around throwing erasers in the air, would you?"
         } else {
-            console.log("Not quite. The answer will be after the line, so if you want to try again, you've been warned not to peek!")
-            console.log("The correct answer is 'Osman, throw the eraser to the air'. I don't know why Osman would do that; they might lose the eraser after.")
+            return "Not quite. The answer will be after this line, so if you want to try again, you've been warned not to peek!<br/>" +
+            "The correct answer is 'Osman, throw the eraser to the air'. I don't know why Osman would do that; they might lose the eraser after."
         }
     }
 }

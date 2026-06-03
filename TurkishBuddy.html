@@ -11,16 +11,19 @@
         </p>
         <p>   
         <div id="output"> Practice/Test text here </div>
-        <div id="answer"> </div>
         </p>
         <button onclick="document.getElementById('output').innerHTML = practice();"> Practice </button>
         <button onclick="document.getElementById('output').innerHTML = test();"> Test </button>
         <div>
-        <label for="answer">Answer (all lowercase, with special characters)</label>
+        <label for="answer">Answer (all lowercase, <i>with</i> special characters)</label>
         </div>
         <div>
         <input type="text" id="answer" name="answer" />
         </div>
+        <p>
+            <div id="answercheck"> Correct/incorrect message after answer check will show here </div>
+        </p>
+        <button onclick="answer(set, answer)">Submit</button>
 
     </body>
 </HTML>
