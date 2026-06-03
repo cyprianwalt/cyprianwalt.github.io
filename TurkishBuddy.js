@@ -38,8 +38,8 @@ function test() {
     }
 }
 
-function answer(set, answer) {
-    answer = document.getElementById('answer')
+function answer(set) {
+    let answer = document.getElementById('answer')
     if (set == 1) {
         if (answer == "yaprak havadadır" || answer == "Yaprak havadadır") {
             return "That's right!! Good job!!!"
