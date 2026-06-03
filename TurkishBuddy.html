@@ -7,15 +7,17 @@
             Welcome to the Turkish Buddy, currently on Version 2! To begin learning, select the "Practice" or "Test" button to be given a random set of either type.
             In Practice, you will be given three Turkish sentences with English translations, followed by an English sentence you are tasked with translating to Turkish.
             In Test, you will be given one Turkish sentence and be tasked with translating it to English with <i>no</i> context sentences.
-            Below the buttons, there is a text box, where you should submit your answers in <i>complete lowercase</i>.
+            Below the buttons, there is a text box, where you should submit your answers <i>using Turkish characters</i>.
         </p>
         <p>   
         <div id="output"> Practice/Test text here </div>
         </p>
-        <button onclick="document.getElementById('output').innerHTML = practice();"> Practice </button>
-        <button onclick="document.getElementById('output').innerHTML = test();"> Test </button>
+        <p>
+            <button onclick="document.getElementById('output').innerHTML = practice();"> Practice </button>
+            <button onclick="document.getElementById('output').innerHTML = test();"> Test </button>
+        </p>
         <div>
-        <label for="answer">Answer (all lowercase, <i>with</i> special characters)</label>
+        <label for="answer">Answer (<i>with</i> special characters)</label>
         </div>
         <div>
         <input type="text" id="answer" name="answer" />
