@@ -23,7 +23,7 @@
         <p>
             <div id="answercheck"> Correct/incorrect message after answer check will show here </div>
         </p>
-        <button onclick="answer(set, answer)">Submit</button>
+        <button onclick="document.getElementById('answercheck').innerHTML = answer(set, answer)">Submit</button>
 
     </body>
 </HTML>
