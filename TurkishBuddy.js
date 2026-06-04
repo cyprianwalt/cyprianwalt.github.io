@@ -85,8 +85,8 @@ function answer(set) {
     }
 }
 
-function set_test(set) {
-    console.log(set)
+function test() {
+    return (document.getElementById('answer'))
 }
 
 menu()
