@@ -10,15 +10,15 @@ var set = 0
 function practice() {
     set = Math.floor(Math.random() * 3) + 1
     if (set == 1) {
-        return "<b>Practice- set 1</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Practice- set 1</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)!<br/>" +
                 " top havadadır -> the ball is in the air <br/> top yerdedir -> the ball is on the ground <br/> hava yapraktadır -> the air is at the leaf<br/>" +
                 "Translate to Turkish: <br/> the leaf is in the air";
     } else if (set == 2) {
-        return "<b>Practice- set 2</b>; Remember to include the set variable and your answer all lowercase when answering! <br/>" +
+        return "<b>Practice- set 2</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)! <br/>" +
                 " Ali, lütfen kalemi ver -> Ali, please give the pencil <br/> Erdem, kalemi al -> Erdem, take the pencil <br/> Ada, silgiyi al -> Ada, take the eraser<br/>" +
                 "Translate to Turkish: <br/> Esma, please give the eraser";
     } else if (set == 3) {
-        return "<b>Practice- set 3</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Practice- set 3</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)!<br/>" +
                 " Mehmet, kağıda yaz -> Mehmet, write on the paper <br/> Meral, yazıyı sil -> Meral, erase the writing <br/> Buse, kağıdı at -> Buse, throw the paper<br/>" +
                 "Translate to Turkish: <br/> Ergin, erase the paper";
     }
@@ -27,13 +27,13 @@ function practice() {
 function test() {
     set = Math.floor(Math.random() * 3) + 4
     if (set == 4) {
-        return "<b>Test set 1</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Test set 1</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)!<br/>" +
                 "Translate to English: <br/> Ahmet, topu Mehmet'e at";
     } else if (set == 5) {
-        return "<b>Test set 2</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Test set 2</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)!<br/>" +
                 "Translate to English: <br/> Iclal, lütfen yaprağa yaz";
     } else if (set == 6) {
-        return "<b>Test set 3</b>; Remember to include the set variable and your answer all lowercase when answering!<br/>" +
+        return "<b>Test set 3</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)!<br/>" +
                 "Translate to English: <br/> Osman, silgiyi havaya at";
     }
 }
@@ -86,7 +86,8 @@ function answer(set) {
 }
 
 function devtest() {
-    return (document.getElementById('answer'))
+    let ans = document.getElementById('answer')
+    return (ans)
 }
 
 menu()
