@@ -85,7 +85,7 @@ function answer(set) {
     }
 }
 
-function test() {
+function devtest() {
     return (document.getElementById('answer'))
 }
 
