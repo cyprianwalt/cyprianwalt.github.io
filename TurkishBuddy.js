@@ -86,7 +86,7 @@ function answer(set) {
 }
 
 function devtest() {
-    let ans = document.getElementById('answer').value
+    var ans = document.getElementById('answer').value
     return (ans)
 }
 
