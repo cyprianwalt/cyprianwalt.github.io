@@ -39,7 +39,7 @@ function test() {
 }
 
 function answer(set) {
-    let answer = document.getElementById('answer')
+    var answer = document.getElementById('answer').value
     if (set == 1) {
         if (answer == "yaprak havadadır" || answer == "Yaprak havadadır") {
             return "That's right!! Good job!!!"
