@@ -7,7 +7,7 @@
             Welcome to the Turkish Buddy, currently on Version 2.1! To begin learning, select the "Practice" or "Test" button to be given a random set of either type. <br/>
             In Practice, you will be given three Turkish sentences with English translations, followed by an English sentence you are tasked with translating to Turkish. <br/>
             In Test, you will be given one Turkish sentence and be tasked with translating it to English with <i>no</i> context sentences. <br/>
-            Below the buttons, there is a text box, where you should submit your answers <i>using Turkish characters</i>.
+            Below the buttons, there is a text box, where you should submit your answers <i>using Turkish special characters</i>.
         </p>
         <p>
             Turkish special character letter bank (if you need to copy-paste): <br/>
@@ -30,7 +30,7 @@
             <div id="answercheck"> Correct/incorrect message after answer check will show here </div>
         </p>
         <button onclick="document.getElementById('answercheck').innerHTML = answer(set);">Submit</button> <br/> <br/>
-        <button onclick="document.getElementById('opencloselog') = changelogstate();" id="opencloselog">Open Changelog</button>
+        <button onclick="document.getElementById('opencloselog').innerHTML = changelogstate();" id="opencloselog">Open Changelog</button>
         <div id="changelog"></div>
         <div style="display: none" id="changelogtext">
             Changelog <br/>
