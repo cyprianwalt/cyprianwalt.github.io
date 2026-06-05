@@ -95,9 +95,10 @@ function changelogstate(log_state) {
         log_state = 1
         document.getElementById('changelog').innerHTML = document.getElementById('changelogtext').innerHTML
         return ("Close Changelog")
-    } else if (log_state == 1) {
+    } 
+    if (log_state == 1) {
         log_state = 0
-        document.getElementById('changelog').innerHTML = ""
+        document.getElementById('changelog').innerHTML = "".innerHTML
         return ("Open Changelog")
     }
 }
