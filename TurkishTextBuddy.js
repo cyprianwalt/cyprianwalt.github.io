@@ -90,7 +90,7 @@ function devtest() {
     return (ans)
 }
 var log_state = 0
-function changelog() {
+function changelogstate(log_state) {
     if (log_state == 0) {
         log_state = 1
         document.getElementById('changelog').innerHTML = document.getElementById('changelogtext').innerHTML
