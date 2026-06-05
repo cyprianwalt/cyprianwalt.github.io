@@ -89,5 +89,17 @@ function devtest() {
     var ans = document.getElementById('answer').value
     return (ans)
 }
+var log_state = 0
+function changelog() {
+    if (log_state == 0) {
+        log_state = 1
+        document.getElementById('changelog').innerHTML = document.getElementById('changelogtext').innerHTML
+        return ("Close Changelog")
+    } else if (log_state == 1) {
+        log_state = 0
+        document.getElementById('changelog').innerHTML = ""
+        return ("Open Changelog")
+    }
+}
 
 menu()
