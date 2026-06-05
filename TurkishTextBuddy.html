@@ -4,7 +4,7 @@
     </head>
     <body>
         <p>
-            Welcome to the Turkish Buddy, currently on Version 2! To begin learning, select the "Practice" or "Test" button to be given a random set of either type. <br/>
+            Welcome to the Turkish Buddy, currently on Version 2.1! To begin learning, select the "Practice" or "Test" button to be given a random set of either type. <br/>
             In Practice, you will be given three Turkish sentences with English translations, followed by an English sentence you are tasked with translating to Turkish. <br/>
             In Test, you will be given one Turkish sentence and be tasked with translating it to English with <i>no</i> context sentences. <br/>
             Below the buttons, there is a text box, where you should submit your answers <i>using Turkish characters</i>.
@@ -17,8 +17,8 @@
         <div id="output"> Practice/Test text here </div>
         </p>
         <p>
-            <button onclick="document.getElementById('output').innerHTML = practice();"> Practice </button>
-            <button onclick="document.getElementById('output').innerHTML = test();"> Test </button>
+            <button onclick="document.getElementById('output').innerHTML = practice();" onclick="document.getElementById('answercheck').innerHTML = 'Correct/incorrect message after answer will show here'"> Practice </button>
+            <button onclick="document.getElementById('output').innerHTML = test();" onclick="document.getElementById('answercheck').innerHTML = 'Correct/incorrect message after answer will show here'"> Test </button>
         </p>
         <div>
         <label for="answer">Answer (<i>with</i> special characters)</label>
@@ -27,10 +27,10 @@
         <input type="text" id="answer"/>
         </div>
         <p>
-            <div id="answercheck"> Correct/incorrect message after answer check will show here </div>
+            <div id="answercheck"> Correct/incorrect message after answer check will show here beh </div>
         </p>
         <button onclick="document.getElementById('answercheck').innerHTML = answer(set);">Submit</button> <br/> <br/>
-        <button onclick="document.getElementById('opencloselog') = changelog()" id="opencloselog">Open Changelog</button>
+        <button onclick="document.getElementById('opencloselog') = changelogstate();" id="opencloselog">Open Changelog</button>
         <div id="changelog"></div>
         <div style="display: none" id="changelogtext">
             Changelog <br/>
