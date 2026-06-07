@@ -8,6 +8,10 @@ function menu() {
 var set = 0
 var pset = 0
 function practice() {
+    if (parseInt(document.getElementById('practiceset').value) == 1 || 2 || 3) {
+        set = parseInt(document.getElementById('practiceset').value)
+        pset = 0
+    }
     while (set == pset) {
         set = Math.floor(Math.random() * 3) + 1
     }
@@ -28,6 +32,11 @@ function practice() {
 }
 
 function test() {
+    if (parseInt(document.getElementById('testset').value) == 1 || 2 || 3) {
+        set = parseInt(document.getElementById('testset').value) + 3
+        pset = 0
+    }
+
     while (set == pset) {
         set = Math.floor(Math.random() * 3) + 4
     }
