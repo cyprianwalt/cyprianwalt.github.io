@@ -6,9 +6,12 @@ function menu() {
 }
 
 var set = 0
-
+var pset = 0
 function practice() {
-    set = Math.floor(Math.random() * 3) + 1
+    while (set = pset) {
+        set = Math.floor(Math.random() * 3) + 1
+    }
+    pset = set
     if (set == 1) {
         return "<b>Practice- set 1</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)!<br/>" +
                 " top havadadır -> the ball is in the air <br/> top yerdedir -> the ball is on the ground <br/> hava yapraktadır -> the air is at the leaf<br/>" +
@@ -25,7 +28,10 @@ function practice() {
 }
 
 function test() {
-    set = Math.floor(Math.random() * 3) + 4
+    while (set = pset) {
+        set = Math.floor(Math.random() * 3) + 4
+    }
+    pset = set
     if (set == 4) {
         return "<b>Test set 1</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)!<br/>" +
                 "Translate to English: <br/> Ahmet, topu Mehmet'e at";
