@@ -8,10 +8,7 @@ function menu() {
 var set = 0
 var pset = 0
 function practice() {
-    do {
         set = Math.floor(Math.random() * 3) + 1
-    }
-    while (set = pset)
     pset = set
     if (set == 1) {
         return "<b>Practice- set 1</b>; Remember to use Turkish characters when answering (if having trouble, copy-pasting works)!<br/>" +
