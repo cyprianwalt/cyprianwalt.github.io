@@ -8,7 +8,7 @@ function menu() {
 var set = 0
 var pset = 0
 function practice() {
-    if (parseInt(document.getElementById('practiceset').value) == 1 || 2 || 3) {
+    if (parseInt(document.getElementById('practiceset').value) == 1 || parseInt(document.getElementById('practiceset').value) == 2 || parseInt(document.getElementById('practiceset').value) == 3) {
         set = parseInt(document.getElementById('practiceset').value)
         pset = 0
     }
