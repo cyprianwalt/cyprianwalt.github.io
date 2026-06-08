@@ -32,7 +32,7 @@ function practice() {
 }
 
 function test() {
-    if (parseInt(document.getElementById('testset').value) == 1 || 2 || 3) {
+    if (parseInt(document.getElementById('testset').value) == 1 || parseInt(document.getElementById('testset').value) == 2 || parseInt(document.getElementById('testset').value) == 3) {
         set = parseInt(document.getElementById('testset').value) + 3
         pset = 0
     }
