@@ -1,10 +1,3 @@
-function menu() {
-    console.log("Welcome to the Turkish Console Buddy's Menu! From here you can switch between different settings, Practice and Test. To ever come back here, just enter 'menu()' into the console!")
-    console.log("Practice: View 4 Turkish sentences with English translations. Then use words from the sentences to translate a given English sentence! <br/> To go into Practice, enter 'practice()' into the console.")
-    console.log("Test: Translate given Turkish words to English with no context sentences. <br/> To go into Test, enter 'test()' into the console.")
-    console.log("When answering a Practice or Test, enter answer(set, [answer]) into the console, [answer] being your answer.")
-}
-
 var set = 0
 var pset = 0
 function practice() {
