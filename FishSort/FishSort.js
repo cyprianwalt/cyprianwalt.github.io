@@ -159,7 +159,7 @@ function spawn_fishpic4() {
     } else if (fishnum4 == fish4[1] || fishnum4 == fish4[2] || fishnum4 == fish4[5] || fishnum4 == fish4[9] || fishnum4 == fish4[14]) {
         fish4match = "OS"
     } else if (fishnum4 == fish4[7] || fishnum4 == fish4[8]) {
-        fish4match = "EEL"
+        fish4match = "Eel"
     }
     return(fishnum4)
 }
@@ -189,7 +189,7 @@ function clear_fish() {
     SBDnum = 0
     OBDnum = 0
     OSnum = 0
-    EELnum = 0
+    Eelnum = 0
     SRnum = 0
 
     fish1pos = 0
@@ -225,15 +225,35 @@ function clear_fish() {
     document.getElementById('RBE PFS 2').style.display = "none"
     document.getElementById('RBE PFS 3').style.display = "none"
     document.getElementById('RBE PFS 4').style.display = "none"
+    document.getElementById('SBD PFS 1').style.display = "none"
+    document.getElementById('SBD PFS 2').style.display = "none"
+    document.getElementById('SBD PFS 3').style.display = "none"
+    document.getElementById('SBD PFS 4').style.display = "none"
+    document.getElementById('OBD PFS 1').style.display = "none"
+    document.getElementById('OBD PFS 2').style.display = "none"
+    document.getElementById('OBD PFS 3').style.display = "none"
+    document.getElementById('OBD PFS 4').style.display = "none"
+    document.getElementById('OS PFS 1').style.display = "none"
+    document.getElementById('OS PFS 2').style.display = "none"
+    document.getElementById('OS PFS 3').style.display = "none"
+    document.getElementById('OS PFS 4').style.display = "none"
+    document.getElementById('Eel PFS 1').style.display = "none"
+    document.getElementById('Eel PFS 2').style.display = "none"
+    document.getElementById('Eel PFS 3').style.display = "none"
+    document.getElementById('Eel PFS 4').style.display = "none"
+    document.getElementById('SR PFS 1').style.display = "none"
+    document.getElementById('SR PFS 2').style.display = "none"
+    document.getElementById('SR PFS 3').style.display = "none"
+    document.getElementById('SR PFS 4').style.display = "none"
 }
 
 function initialize() {
-    clear_fish();
-
     document.getElementById('fishpic1').src = spawn_fishpic1()
     document.getElementById('fishpic2').src = spawn_fishpic2()
     document.getElementById('fishpic3').src = spawn_fishpic3()
     document.getElementById('fishpic4').src = spawn_fishpic4()
+
+    clear_fish()
 
     document.getElementById('answer').style.display = "none"
 }
@@ -257,7 +277,7 @@ var RBEnum = 0
 var SBDnum = 0
 var OBDnum = 0
 var OSnum = 0
-var EELnum = 0
+var Eelnum = 0
 var SRnum = 0
 
 function finish_pair(group) {
@@ -523,30 +543,30 @@ function finish_pair(group) {
                 fish4pos = "OS"
             }
 
-        } else if (group == "EEL") {
-            EELnum += 1
-            if (EELnum == 1) {
+        } else if (group == "Eel") {
+            Eelnum += 1
+            if (Eelnum == 1) {
                 document.getElementById('Eel PFS 1').src = document.getElementById(selectFish).src
                 document.getElementById('Eel PFS 1').style.display = ""
-            } else if (EELnum == 2) {
+            } else if (Eelnum == 2) {
                 document.getElementById('Eel PFS 2').src = document.getElementById(selectFish).src
                 document.getElementById('Eel PFS 2').style.display = ""
-            } else if (EELnum == 3) {
+            } else if (Eelnum == 3) {
                 document.getElementById('Eel PFS 3').src = document.getElementById(selectFish).src
                 document.getElementById('Eel PFS 3').style.display = ""
-            } else if (EELnum == 4) {
+            } else if (Eelnum == 4) {
                 document.getElementById('Eel PFS 4').src = document.getElementById(selectFish).src
                 document.getElementById('Eel PFS 4').style.display = ""
             }
 
             if (selectFish == "fishpic1") {
-                fish1pos = "EEL"
+                fish1pos = "Eel"
             } else if (selectFish == "fishpic2") {
-                fish2pos = "EEL"
+                fish2pos = "Eel"
             } else if (selectFish == "fishpic3") {
-                fish3pos = "EEL"
+                fish3pos = "Eel"
             } else if (selectFish == "fishpic4") {
-                fish4pos = "EEL"
+                fish4pos = "Eel"
             }
 
         } else if (group == "SR") {
