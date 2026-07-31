@@ -1,0 +1,136 @@
+<HTML>
+    <!--hi, uh yeah i know my code is bad... i would say "please don't take it" but honestly i doubt anyone'd want to with its quality. seriously, it's terrible. horrible. detestable. abominable. disgusting to the point where it is insulting.-->
+    <head>
+        <script type="text/javascript" src="FishSort.js"> </script>
+        <title>Fish Sort</title>
+    </head>
+    <h1>Fish Sort!</h1> <h2>Version 1</h2> <h3>by <span style="color:rgb(255, 100, 20)">kibriskid</span>, me</h3> <h4>and only me, no AI, no website builder, nothin else</h4>
+    <body>
+        <p>
+            Welcome to Fish Sort! Finally released, and thus on Version 1! Although it's not much of a "finally", I did this in 4 afternoons! Is this what a Game Jam feels like?!?! <br/> <br/>
+            Sort the 4 images of fish given, into their corresponding 1 of 12 fish family groupings, as separated in the REEF Caribbean Fish Guide! <br/>
+            Click the "Start" button to begin the game! <br/>
+            Click an image to select it. Then, click the corresponding family group it is from to sort it. <br/>
+            If you make a mistake, click the "Clear" button to bring all the fish back to their original positions. <br/>
+            Once you've finished and are confident with your sorting, click the "Check" button to check your answers! It will then show you the correct answers using abbreviations.
+        </p>
+
+        <div><b>Thanks to the <a href="https://www.thrivingislands.com/reefs">Thriving Islands' Butler Bay Reef Guide</a>! That is where all the images were taken from. Check them out! </b> </div> <br/> <br/>
+
+            <button id="abbrvguidebtn" onclick="document.getElementById('abbrvguidebtn').innerHTML = change_abbrv_state()">Open Abbreviation Guide</button> <br/>
+
+            <div id="abbrvguidetxt" style="display:none">
+                DO: Disks & Ovals (Angelfish, Butteflyfish, Surgeonfish) <br/>
+                S: Silvery (Myriad of silvery fish) <br/>
+                SH: Sloping Heads (Grunts, Snappers)<br/>
+                SO: Small Ovals (Damselfishes, Chromises) <br/>
+                HB: Heavy Bodies (Groupers, Hinds, Basses)<br/>
+                PFS: Pectoral Fin Swimmers (Wrasses, Parrotfishes, Hogfishes) <br/>
+                RBE: Reddish, Big-eyed (Squirrelfishes, Bigeyes, Cardinalfish) <br/>
+                SBD: Small Bottom-Dwellers (Gobies, Blennies, Jawfishes) <br/>
+                OBD: Odd Bottom-Dwellers (Flounders, Scorpionfish, Hawkfishes)<br/>
+                OS: Odd Swimmers (Myriad of odd-appearing swimming fish)<br/>
+                Eel: Eels (Eels) <br/>
+                SR: Sharks & Rays (Self-explanatory) <br/> <br/> </div>
+
+        <button onclick="initialize()"> Start </button>
+        <button onclick="document.getElementById('answer').innerHTML = check()"> Check </button>
+        <button onclick="clear_fish()"> Clear </button>
+        <br/> <br/>
+        <div id="answer" style="display:none"> </div>
+        <br/> <br/>
+
+        <img src="WaterTop2.png" alt="fishpic1" id="fishpic1" class="bg" style="border:8px solid #FFFFFF" width="280px" height="280px" onclick="try_select('fishpic1')"> 
+        <img src="WaterTop2.png" alt="fishpic2" id="fishpic2" class="bg" style="border:8px solid #FFFFFF" width="280px" height="280px" onclick="try_select('fishpic2')"> 
+        <img src="WaterTop2.png" alt="fishpic3" id="fishpic3" class="bg" style="border:8px solid #FFFFFF" width="280px" height="280px" onclick="try_select('fishpic3')"> 
+        <img src="WaterTop2.png" alt="fishpic4" id="fishpic4" class="bg" style="border:8px solid #FFFFFF" width="280px" height="280px" onclick="try_select('fishpic4')">
+        <br/> <br/>
+
+        
+        <button onclick="finish_pair('DO')">Disks & Ovals</button> <br/>
+        <img src="" alt="possible fish spot" id="DO PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="DO PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="DO PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="DO PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('S')">Silvery</button> <br/>
+        <img src="" alt="possible fish spot" id="S PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="S PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="S PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="S PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('SH')">Sloping Heads</button> <br/>
+        <img src="" alt="possible fish spot" id="SH PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SH PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SH PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SH PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('SO')">Small Ovals</button> <br/>
+        <img src="" alt="possible fish spot" id="SO PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SO PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SO PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SO PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('HB')">Heavy Bodies</button> <br/>
+        <img src="" alt="possible fish spot" id="HB PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="HB PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="HB PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="HB PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('PFS')">Pectoral Fin Swimmers</button> <br/>
+        <img src="" alt="possible fish spot" id="PFS PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="PFS PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="PFS PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="PFS PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('RBE')">Reddish, Big-eyed</button> <br/>
+        <img src="" alt="possible fish spot" id="RBE PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="RBE PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="RBE PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="RBE PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('SBD')">Small, Elongated Bottom-Dwellers</button> <br/>
+        <img src="" alt="possible fish spot" id="SBD PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SBD PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SBD PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SBD PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('OBD')">Odd Shaped Bottom-Dwellers</button> <br/>
+        <img src="" alt="possible fish spot" id="OBD PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="OBD PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="OBD PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="OBD PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('OS')">Odd Shaped Swimmers</button> <br/>
+        <img src="" alt="possible fish spot" id="OS PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="OS PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="OS PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="OS PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('Eel')">Eels</button> <br/>
+        <img src="" alt="possible fish spot" id="Eel PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="Eel PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="Eel PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="Eel PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+        <button onclick="finish_pair('SR')">Sharks & Rays</button> <br/>
+        <img src="" alt="possible fish spot" id="SR PFS 1" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SR PFS 2" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SR PFS 3" width="280px" height="280px" style="display:none"> 
+        <img src="" alt="possible fish spot" id="SR PFS 4" width="280px" height="280px" style="display:none">
+        <br/> <hr/>
+
+    </body>
+    <br/> <br/>
+</HTML>
