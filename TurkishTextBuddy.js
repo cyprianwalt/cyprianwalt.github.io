@@ -109,5 +109,3 @@ function changelogstate() {
         return ("Open Changelog")
     }
 }
-
-menu()
